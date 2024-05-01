@@ -21,7 +21,7 @@ function checkName(name) {
             return "invalid";
         }        
         const goodNamesLastWords = ['a', 'y', 'i', 'e', 'o', 'u', 'w'];
-        const smallCase = name.toLowerCase();
+         const smallCase = name.toLocaleLowerCase();
         const lastChar = smallCase.slice(-1);
         if (!goodNamesLastWords.includes(lastChar)) {
             return "Bad name";
@@ -29,6 +29,12 @@ function checkName(name) {
             return "Good Name";
         }
     }
+console.log(checkName('Salman'))
+console.log(checkName('RAFFE'))
+console.log(checkName('jhankar'))
+console.log(checkName(199))
+console.log(checkName(['Rashed']))
+
 
 function deleteInvalids(array) {  
     if (Array.isArray(array)) {       
